@@ -1,0 +1,94 @@
+/* Reset de márgenes y rellenos predeterminados */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Elimina los bordes predeterminados de los enlaces */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Elimina las viñetas y márgenes de las listas */
+ul,
+ol {
+  list-style: none;
+}
+
+/* Elimina los bordes de las tablas */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Restablece las fuentes predeterminadas */
+body {
+  font-family: sans-serif;
+  line-height: 1.5;
+  background-color: #fff;
+  color: #000;
+}
+
+/* Restablece la apariencia de los formularios */
+input,
+button,
+select,
+textarea {
+  background: none;
+  border: none;
+  font: inherit;
+  color: inherit;
+  line-height: inherit;
+}
+
+/* Asegura que los elementos HTML sean tratados como bloques o elementos en línea */
+html {
+  font-size: 100%;
+}
+
+body {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+/* Normaliza la apariencia de las imágenes */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Normaliza el comportamiento de los elementos inline-block */
+video,
+audio {
+  display: block;
+  max-width: 100%;
+}
+
+/* Elimina la apariencia de los botones de formulario */
+button {
+  cursor: pointer;
+}
+
+/* Restablece los bordes de los campos de entrada de formulario */
+input[type="checkbox"],
+input[type="radio"] {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+input[type="checkbox"]:checked,
+input[type="radio"]:checked {
+  background-color: #007bff;
+  border-radius: 50%;
+}
+
+/* Normaliza la apariencia de los cuadros de texto */
+textarea {
+  resize: none;
+}

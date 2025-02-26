@@ -1,0 +1,204 @@
+/* Estilos para el header y nav */
+header {
+  background-color: var(--header-bg);
+  padding: 1rem 2rem;
+  box-shadow: 0 2px 5px var(--shadow-color);
+  position: relative;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+nav ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+nav ul li {
+  margin: 0 1rem;
+}
+
+nav ul li a {
+  color: var(--header-text);
+  font-family: 'Arial', sans-serif;
+  font-size: 1.1rem;
+  padding: 0.5rem 1rem;
+  transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: var(--link-color);
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 5px;
+}
+
+/* Estilo para el botón de cambio de tema */
+#theme-toggle {
+  position: absolute;
+  left: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 0.5rem;
+  font-size: 1.2rem;
+  background-color: var(--link-color);
+  color: var(--header-text);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+}
+
+#theme-toggle:hover {
+  background-color: var(--link-hover);
+}
+
+/* Media query para responsividad del navbar */
+@media (max-width: 768px) {
+  header {
+      padding: 0.5rem;
+  }
+
+  nav {
+      justify-content: flex-start;
+      flex-wrap: nowrap;
+      width: 100%;
+      padding: 0 0.5rem;
+  }
+
+  nav ul {
+      justify-content: space-around;
+      margin: 0 0 0 2.5rem;
+      width: calc(100% - 2.5rem);
+      padding: 0;
+  }
+
+  nav ul li {
+      margin: 0 0.25rem;
+  }
+
+  nav ul li a {
+      font-size: 0.8rem;
+      padding: 0.3rem 0.5rem;
+  }
+
+  #theme-toggle {
+      position: absolute;
+      left: 0.5rem;
+      width: 30px;
+      height: 30px;
+      font-size: 1rem;
+      padding: 0.3rem;
+  }
+}
+
+/* Estilos para el main */
+main {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+article {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* Primera sección (nombre, título, imagen) */
+.intro {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.text-content {
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+  text-align: center;
+}
+
+h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: var(--text-primary);
+  margin-bottom: 0.5rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+  color: var(--text-secondary);
+  margin-bottom: 0.5rem;
+}
+
+h3 {
+  font-size: 1.2rem;
+  color: var(--text-tertiary);
+  margin-bottom: 1rem;
+}
+
+.intro img {
+  max-width: 250px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px var(--shadow-color);
+}
+
+/* Segunda sección (Sobre mí) */
+section:nth-child(2) {
+  background-color: var(--section-bg);
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px var(--shadow-color);
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+section:nth-child(2) h2 {
+  font-size: 1.8rem;
+  color: var(--text-primary);
+  margin-bottom: 1rem;
+}
+
+section:nth-child(2) p {
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+/* Responsividad del main */
+@media (max-width: 768px) {
+  .intro {
+      flex-direction: column;
+      text-align: center;
+      gap: 0.5rem; /* Ajustamos la separación a 0.5rem en móviles */
+  }
+
+  .text-content {
+      width: 100%;
+  }
+
+  .intro img {
+      max-width: 180px;
+      margin: 0 auto;
+  }
+
+  section:nth-child(2) {
+      max-width: 100%;
+  }
+}

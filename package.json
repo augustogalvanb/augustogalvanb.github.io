@@ -1,0 +1,12 @@
+{
+  "name": "pagina_web_personal",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Augusto Galván",
+  "license": "ISC",
+  "description": "Información personal y académica"
+}

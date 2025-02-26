@@ -1,0 +1,194 @@
+/* Estilos para el header y nav */
+header {
+  background-color: var(--header-bg);
+  padding: 1rem 2rem;
+  box-shadow: 0 2px 5px var(--shadow-color);
+  position: relative;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+nav ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+nav ul li {
+  margin: 0 1rem;
+}
+
+nav ul li a {
+  color: var(--header-text);
+  font-family: 'Arial', sans-serif;
+  font-size: 1.1rem;
+  padding: 0.5rem 1rem;
+  transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: var(--link-color);
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 5px;
+}
+
+/* Estilo para el botón de cambio de tema */
+#theme-toggle {
+  position: absolute;
+  left: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 0.5rem;
+  font-size: 1.2rem;
+  background-color: var(--link-color);
+  color: var(--header-text);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+}
+
+#theme-toggle:hover {
+  background-color: var(--link-hover);
+}
+
+/* Media query para responsividad */
+@media (max-width: 768px) {
+  header {
+      padding: 0.5rem; /* Reducimos más el padding */
+  }
+
+  nav {
+      justify-content: flex-start;
+      flex-wrap: nowrap; /* Evita que los ítems se envuelvan */
+      width: 100%; /* Ocupa todo el ancho disponible */
+      padding: 0 0.5rem; /* Padding mínimo */
+  }
+
+  nav ul {
+      justify-content: space-around;
+      margin: 0 0 0 2.5rem; /* Espacio para el botón a la izquierda */
+      width: calc(100% - 2.5rem); /* Resta el espacio del botón */
+      padding: 0;
+  }
+
+  nav ul li {
+      margin: 0 0.25rem; /* Reduce márgenes aún más */
+  }
+
+  nav ul li a {
+      font-size: 0.8rem; /* Reduce más el tamaño del texto */
+      padding: 0.3rem 0.5rem; /* Reduce el padding */
+  }
+
+  #theme-toggle {
+      position: absolute;
+      left: 0.5rem;
+      width: 30px; /* Reduce el tamaño del botón */
+      height: 30px;
+      font-size: 1rem; /* Reduce el ícono */
+      padding: 0.3rem;
+  }
+}
+
+/* Estilos para el main */
+main {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+main h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: var(--text-primary);
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+article {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.education-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.education-item {
+  flex: 1;
+  min-width: 300px;
+  background-color: var(--section-bg);
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px var(--shadow-color);
+}
+
+.education-item h2 {
+  font-size: 1.8rem;
+  color: var(--text-primary);
+  margin-bottom: 1rem;
+}
+
+.education-item p {
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+  margin-bottom: 0.5rem;
+}
+
+.skills {
+  width: 100%;
+  background-color: var(--section-bg);
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px var(--shadow-color);
+  text-align: center; /* Centra todo el contenido */
+}
+
+.skills h2 {
+  font-size: 1.8rem;
+  color: var(--text-primary);
+  margin-bottom: 1rem;
+}
+
+.skills h3 {
+  font-size: 1.4rem;
+  color: var(--text-tertiary);
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.skills p {
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+  margin-bottom: 0.5rem;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+  .education-container {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .education-item,
+  .skills {
+      width: 100%;
+  }
+}
