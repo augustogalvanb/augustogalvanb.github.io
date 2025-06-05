@@ -184,7 +184,7 @@ article {
 /* Clase para abrir el acordeón */
 .accordion-content.open {
   padding: 1rem;
-  max-height: 700px; /* Aumentado para dar espacio al video */
+  max-height: none; /* Aumentado para dar espacio al video */
 }
 
 /* Responsividad */
@@ -196,4 +196,14 @@ article {
   .accordion-content video {
       max-width: 100%; /* Ocupa todo el ancho en móvil */
   }
+}
+
+/* Otros estilos */
+
+img {
+  max-width: 100%; /* Se ajusta al ancho del contenedor */
+  width: 30em; /* Mantiene el ancho deseado en pantallas grandes */
+  height: auto; /* Preserva la proporción */
+  display: inline-block; /* Evita espacios inferiores */
+  margin: 0 auto 1rem; /* Centra y añade espacio abajo */
 }
