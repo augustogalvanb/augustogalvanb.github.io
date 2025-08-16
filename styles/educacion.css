@@ -167,10 +167,11 @@ article {
   color: var(--text-primary);
   text-align: center;
   margin-bottom: 1.5rem;
-  padding-top: 0rem; /* Cambiado de 1rem a 0rem para eliminar el espaciado superior adicional */
+  padding-top: 0rem;
 }
 
 .skills-content {
+  padding: 0.5rem;
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
@@ -179,7 +180,23 @@ article {
 .skill-row {
   display: flex;
   align-items: center;
-  padding: 0.5rem 1rem;
+  gap: 0.5rem; /* Añadido para forzar un espacio entre <h3> y <p> */
+}
+
+.skill-row h3 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: var(--text-primary);
+  margin: 0 0 0 0; /* Reseteamos el margin, el gap lo manejará */
+  white-space: nowrap;
+}
+
+.skill-row p {
+  font-size: 1rem;
+  color: var(--text-secondary);
+  margin: 0;
+  padding-left: 0; /* Eliminamos padding-left ya que el gap lo reemplaza */
+  flex-grow: 1;
 }
 
 /* Media query para pantallas pequeñas */
@@ -190,8 +207,8 @@ article {
 
   .skills h2 {
     font-size: 1.8rem;
-    padding-top: 0rem; /* Cambiado de 0.5rem a 0rem para consistencia */
-    margin-bottom: 1rem; /* Ajuste menor para móviles */
+    padding-top: 0rem;
+    margin-bottom: 1rem;
   }
 
   .skills-content {
@@ -201,8 +218,7 @@ article {
   .skill-row {
     flex-direction: column;
     align-items: flex-start;
-    gap: 0.2rem;
-    padding: 0.3rem 0.5rem;
+    gap: 0.2rem; /* Reducido para móviles */
   }
 
   .skill-row h3 {
