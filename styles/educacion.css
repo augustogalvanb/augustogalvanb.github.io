@@ -67,39 +67,39 @@ nav ul li a:hover {
 /* Media query para responsividad */
 @media (max-width: 768px) {
   header {
-      padding: 0.5rem; /* Reducimos más el padding */
+    padding: 0.5rem;
   }
 
   nav {
-      justify-content: flex-start;
-      flex-wrap: nowrap; /* Evita que los ítems se envuelvan */
-      width: 100%; /* Ocupa todo el ancho disponible */
-      padding: 0 0.5rem; /* Padding mínimo */
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+    width: 100%;
+    padding: 0 0.5rem;
   }
 
   nav ul {
-      justify-content: space-around;
-      margin: 0 0 0 2.5rem; /* Espacio para el botón a la izquierda */
-      width: calc(100% - 2.5rem); /* Resta el espacio del botón */
-      padding: 0;
+    justify-content: space-around;
+    margin: 0 0 0 2.5rem;
+    width: calc(100% - 2.5rem);
+    padding: 0;
   }
 
   nav ul li {
-      margin: 0 0.25rem; /* Reduce márgenes aún más */
+    margin: 0 0.25rem;
   }
 
   nav ul li a {
-      font-size: 0.8rem; /* Reduce más el tamaño del texto */
-      padding: 0.3rem 0.5rem; /* Reduce el padding */
+    font-size: 0.8rem;
+    padding: 0.3rem 0.5rem;
   }
 
   #theme-toggle {
-      position: absolute;
-      left: 0.5rem;
-      width: 30px; /* Reduce el tamaño del botón */
-      height: 30px;
-      font-size: 1rem; /* Reduce el ícono */
-      padding: 0.3rem;
+    position: absolute;
+    left: 0.5rem;
+    width: 30px;
+    height: 30px;
+    font-size: 1rem;
+    padding: 0.3rem;
   }
 }
 
@@ -152,43 +152,67 @@ article {
   margin-bottom: 0.5rem;
 }
 
+/* Estilos para la sección de habilidades */
 .skills {
-  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 1.5rem 2rem;
   background-color: var(--section-bg);
-  padding: 1.5rem;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px var(--shadow-color);
-  text-align: center; /* Centra todo el contenido */
+  border-radius: 8px;
 }
 
 .skills h2 {
-  font-size: 1.8rem;
+  font-size: 2rem;
+  font-weight: bold;
   color: var(--text-primary);
-  margin-bottom: 1rem;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  padding-top: 0rem; /* Cambiado de 1rem a 0rem para eliminar el espaciado superior adicional */
 }
 
-.skills h3 {
-  font-size: 1.4rem;
-  color: var(--text-tertiary);
-  margin-top: 1rem;
-  margin-bottom: 0.5rem;
+.skills-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 
-.skills p {
-  font-size: 1.1rem;
-  color: var(--text-secondary);
-  margin-bottom: 0.5rem;
+.skill-row {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 1rem;
 }
 
-/* Responsividad */
+/* Media query para pantallas pequeñas */
 @media (max-width: 768px) {
-  .education-container {
-      flex-direction: column;
-      align-items: center;
+  .skills {
+    padding: 1rem;
   }
 
-  .education-item,
-  .skills {
-      width: 100%;
+  .skills h2 {
+    font-size: 1.8rem;
+    padding-top: 0rem; /* Cambiado de 0.5rem a 0rem para consistencia */
+    margin-bottom: 1rem; /* Ajuste menor para móviles */
+  }
+
+  .skills-content {
+    padding: 0.5rem;
+  }
+
+  .skill-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.2rem;
+    padding: 0.3rem 0.5rem;
+  }
+
+  .skill-row h3 {
+    font-size: 1.1rem;
+    margin: 0;
+  }
+
+  .skill-row p {
+    font-size: 0.9rem;
+    padding-left: 0;
+    text-align: left;
   }
 }
