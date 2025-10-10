@@ -172,9 +172,11 @@ nav {
     display: flex;
     align-items: center;
     padding: 0 2rem;
+    padding-top: 80px;
     background: linear-gradient(135deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);
     position: relative;
     overflow: hidden;
+    width: 100%;
 }
 
 .hero::before {
@@ -187,6 +189,7 @@ nav {
     background: radial-gradient(circle, var(--primary-color) 0%, transparent 70%);
     opacity: 0.1;
     animation: float 20s ease-in-out infinite;
+    pointer-events: none;
 }
 
 @keyframes float {
@@ -292,6 +295,8 @@ section {
     padding: 5rem 2rem;
     max-width: 1200px;
     margin: 0 auto;
+    width: 100%;
+    overflow-x: hidden;
 }
 
 .section-title {
@@ -1089,25 +1094,40 @@ footer {
         display: block;
     }
 
+    section {
+        padding: 3rem 1rem;
+    }
+
+    .hero {
+        padding: 0 1rem;
+        min-height: 100vh;
+    }
+
     .hero-content {
         grid-template-columns: 1fr;
         text-align: center;
+        gap: 2rem;
     }
 
     .hero-text h1 {
-        font-size: 2.5rem;
+        font-size: 2rem;
+    }
+
+    .hero-text .subtitle {
+        font-size: 1.2rem;
     }
 
     .hero-image {
-        margin-top: 2rem;
+        margin-top: 1rem;
     }
 
     .hero-image img {
-        max-width: 300px;
+        max-width: 250px;
     }
 
     .about-content {
         grid-template-columns: 1fr;
+        gap: 2rem;
     }
 
     .timeline::before {
@@ -1139,6 +1159,14 @@ footer {
 
     .hero-buttons {
         justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .btn {
+        width: 100%;
+        max-width: 300px;
+        justify-content: center;
     }
 
     .tech-categories {
@@ -1146,6 +1174,62 @@ footer {
     }
 
     .projects-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .project-card {
+        max-width: 100%;
+    }
+
+    .education-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .toast {
+        right: 1rem;
+        left: 1rem;
+        bottom: 1rem;
+        width: auto;
+    }
+
+    .modal-content {
+        width: 95%;
+        max-width: 95%;
+        margin: 1rem;
+    }
+
+    .video-modal .modal-content {
+        width: 95%;
+        max-width: 95%;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-text h1 {
+        font-size: 1.75rem;
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .hero-image img {
+        max-width: 200px;
+    }
+
+    nav {
+        padding: 1rem;
+    }
+
+    .logo {
+        font-size: 1.3rem;
+    }
+
+    .project-title {
+        font-size: 1.1rem;
+    }
+
+    .tech-list {
         grid-template-columns: 1fr;
     }
 }
