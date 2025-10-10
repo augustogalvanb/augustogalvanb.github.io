@@ -97,7 +97,7 @@ contactForm.addEventListener('submit', async (e) => {
     
     try {
         // Send data to API - CAMBIA ESTA URL POR LA DE TU PROYECTO EN VERCEL
-        const response = await fetch('https://tu-proyecto.vercel.app/api/contact', {
+        const response = await fetch('https://server-email-portfolio-lovat.vercel.app/contact', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -458,3 +458,9 @@ createScrollToTopButton();
 console.log('%c¡Hola Developer! 👋', 'color: #2563eb; font-size: 20px; font-weight: bold;');
 console.log('%cSi estás viendo esto, ¡me encantaría conectar contigo!', 'color: #475569; font-size: 14px;');
 console.log('%cContáctame en: augusto_galvan@outlook.com', 'color: #06b6d4; font-size: 14px;');
+
+// Console message for developers
+console.log('%c¡Hola Developer! 👋', 'color: #2563eb; font-size: 20px; font-weight: bold;');
+console.log('%cSi estás viendo esto, ¡me encantaría conectar contigo!', 'color: #475569; font-size: 14px;');
+console.log('%cContáctame en: augusto_galvan@outlook.com', 'color: #06b6d4; font-size: 14px;');
+
