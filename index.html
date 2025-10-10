@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Augusto Galván - Web Developer</title>
+    <link rel="icon" type="image/svg+xml" href="./assets/logo.svg">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- AOS Animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Loader -->
+    <div class="loader" id="loader">
+        <div class="loader-spinner"></div>
+    </div>
+
+    <!-- Header -->
+    <header>
+        <nav>
+            <a href="#home" class="logo">AG.</a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home">Inicio</a></li>
+                <li><a href="#about">Sobre mí</a></li>
+                <li><a href="#projects">Proyectos</a></li>
+                <li><a href="#experience">Experiencia</a></li>
+                <li><a href="#tech">Tecnologías</a></li>
+                <li><a href="#education">Educación</a></li>
+                <li><a href="#contact">Contacto</a></li>
+                <li>
+                    <button class="theme-toggle" id="themeToggle">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                </li>
+            </ul>
+            <button class="mobile-menu-toggle" id="mobileMenuToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <div class="hero-text" data-aos="fade-right">
+                <h1>Augusto Galván</h1>
+                <p class="subtitle">Backend Web Developer</p>
+                <p class="description">
+                    Argentina, San Miguel de Tucumán.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#contact" class="btn btn-primary">
+                        <i class="fas fa-envelope"></i>
+                        Contactar
+                    </a>
+                    <button class="btn btn-secondary" id="downloadCV">
+                        <i class="fas fa-download"></i>
+                        Descargar CV
+                    </button>
+                </div>
+            </div>
+            <div class="hero-image" data-aos="fade-left">
+                <img src="./assets/134084754_101324861908185_1936051057121642833_n.jpg" alt="Augusto Galván" class="profile-image">
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <h2 class="section-title" data-aos="fade-up">Sobre mí</h2>
+        <div class="about-content">
+            <div class="about-image" data-aos="fade-right">
+                <img src="https://images.unsplash.com/photo-1517180102446-f3ece451e9d8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="About me">
+            </div>
+            <div class="about-text" data-aos="fade-left">
+                <p>
+                    Desarrollador Backend con experiencia en la creación de aplicaciones web, especializado en Javascript, Typescript, Node.js y NestJS, con conocimientos sólidos en React para colaborar en entornos Fullstack.
+                </p>
+                <p>
+                    Capaz de implementar APIs RESTful, autenticación segura, pasarelas de pago, despliegue en la nube y manejo de bases de datos relacionales y no relacionales.
+                </p>
+                <p>
+                    Comprometido con el trabajo en equipo, la resolución de problemas y el aprendizaje continuo.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+        <h2 class="section-title" data-aos="fade-up">Proyectos</h2>
+        <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">
+            Algunos de mis trabajos más recientes
+        </p>
+        <div class="projects-grid">
+            <div class="project-card" data-aos="fade-up" data-aos-delay="200">
+                <div class="project-image">
+                    <img src="./assets/portada-ecommerce.png" alt="E-commerce Platform">
+                </div>
+                <div class="project-content">
+                    <h3 class="project-title">Ecommerce Fullstack</h3>
+                    <p class="project-description">
+                        E-commerce completo y funcional con panel de administración, procesamiento de pagos mediante Mercado Pago, envío automático de facturas por email y responsive.
+                    </p>
+                    <p class="tech-label">Tecnologías utilizadas:</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Node.js</span>
+                        <span class="tech-tag">NestJS</span>
+                        <span class="tech-tag">PostgreSQL</span>
+                        <span class="tech-tag">Mercado Pago</span>
+                        <span class="tech-tag">JWT</span>
+                        <span class="tech-tag">Bcrypt</span>
+                        <span class="tech-tag">Cloudinary</span>
+                        <span class="tech-tag">Prisma</span>
+                        <span class="tech-tag">TypeScript</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/augustogalvanb/ecommerce-fullstack" target="_blank" class="project-link">
+                            <i class="fab fa-github"></i>
+                            Repositorio
+                        </a>
+                        <button class="project-link video-btn" data-video="hnJJEDERlfs">
+                            <i class="fas fa-play-circle"></i>
+                            Demo
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card" data-aos="fade-up" data-aos-delay="300">
+                <div class="project-image">
+                    <img src="./assets/portada-aplicacion de turnos.png" alt="Task Management API">
+                </div>
+                <div class="project-content">
+                    <h3 class="project-title">Aplicación de turnos</h3>
+                    <p class="project-description">
+                        Aplicación web fullstack diseñada para gestionar turnos. Permite a los usuarios registrarse, iniciar sesión, subir fotos de perfil, agendar y cancelar turnos, con confirmaciones automáticas por correo electrónico.
+                    </p>
+                    <p class="tech-label">Tecnologías utilizadas:</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Node.js</span>
+                        <span class="tech-tag">Express</span>
+                        <span class="tech-tag">PostgreSQL</span>
+                        <span class="tech-tag">React</span>
+                        <span class="tech-tag">CSS Modules</span>
+                        <span class="tech-tag">js-cookie</span>
+                        <span class="tech-tag">TypeORM</span>
+                        <span class="tech-tag">TypeScript</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/augustogalvanb/Aplicacion-de-turnos" target="_blank" class="project-link">
+                            <i class="fab fa-github"></i>
+                            Repositorio
+                        </a>
+                        <button class="project-link video-btn" data-video="kw-EylZrPPY">
+                            <i class="fas fa-play-circle"></i>
+                            Demo
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card" data-aos="fade-up" data-aos-delay="400">
+                <div class="project-image">
+                    <img src="./assets/portada-sistemadegestionclientes.png" alt="Microservices Architecture">
+                </div>
+                <div class="project-content">
+                    <h3 class="project-title">Sistema de gestión de clientes</h3>
+                    <p class="project-description">
+                        Aplicación web fullstack diseñada para registrar, buscar y gestionar clientes, con un sistema de notificaciones para vencimientos de suscripciones.
+                    </p>
+                    <p class="tech-label">Tecnologías utilizadas:</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Node.js</span>
+                        <span class="tech-tag">Express.js</span>
+                        <span class="tech-tag">MongoDB</span>
+                        <span class="tech-tag">Mongoose</span>
+                        <span class="tech-tag">Bootstrap</span>
+                        <span class="tech-tag">JavaScript</span>
+                        
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/augustogalvanb/Sistema-de-Gestion-de-Clientes" target="_blank" class="project-link">
+                            <i class="fab fa-github"></i>
+                            Repositorio
+                        </a>
+                        <button class="project-link video-btn" data-video="T-iekf9sUtA">
+                            <i class="fas fa-play-circle"></i>
+                            Demo
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card" data-aos="fade-up" data-aos-delay="400">
+                <div class="project-image">
+                    <img src="./assets/portada-proyecto-henry.png" alt="Microservices Architecture">
+                </div>
+                <div class="project-content">
+                    <h3 class="project-title">Proyecto final - Henry</h3>
+                    <p class="project-description">
+                        Aplicación web fullstack de Sistema de Gestión y Ventas interno. para que un usuario "Administrador" tenga un control total sobre sus tiendas, inventario, stock y ventas. Proyecto grupal realizado para aprobar el bootcamp de Henry.
+                    </p>
+                    <p class="tech-label">Tecnologías utilizadas:</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Node.js</span>
+                        <span class="tech-tag">NestJS</span>
+                        <span class="tech-tag">Swagger/OpenAPI</span>
+                        <span class="tech-tag">Stripe</span>
+                        <span class="tech-tag">TypeORM</span>
+                        <span class="tech-tag">PostgreSQL</span>
+                        <span class="tech-tag">OAuth</span>
+                        <span class="tech-tag">TypeScript</span>
+                        <span class="tech-tag">Next.js</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/augustogalvanb/Proyecto-Final-Henry---Sistema-de-Gestion-y-Ventas" target="_blank" class="project-link">
+                            <i class="fab fa-github"></i>
+                            Repositorio
+                        </a>
+                        <button class="project-link video-btn" data-video="KEpFeF07zDQ">
+                            <i class="fas fa-play-circle"></i>
+                            Demo
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience">
+        <h2 class="section-title" data-aos="fade-up">Experiencia Profesional</h2>
+        <div class="timeline">
+            <div class="timeline-item" data-aos="fade-up" data-aos-delay="200">
+                <div class="timeline-content">
+                    <div class="timeline-date">2025</div>
+                    <h3 class="timeline-title">Backend Developer Jr</h3>
+                    <p class="timeline-company">Tzania Industrial Solutions (Startup – Sector RegTech)</p>
+                    <p class="timeline-description">
+                        Participé en el desarrollo del MVP de una plataforma RegTech orientada a sectores regulados como la aeronáutica y aviación.
+                    </p>
+                </div>
+                <div class="timeline-dot"></div>
+            </div>
+
+            <div class="timeline-item" data-aos="fade-up" data-aos-delay="300">
+                <div class="timeline-content">
+                    <div class="timeline-date">2025</div>
+                    <h3 class="timeline-title">Back End Web Developer Junior</h3>
+                    <p class="timeline-company">Henry Bootcamp (Proyecto Grupal)</p>
+                    <p class="timeline-description">
+                        Participé en el desarrollo del MVP de un Sistema de Gestión y Ventas interno, para administrar tiendas, inventario, stock y ventas.
+                    </p>
+                </div>
+                <div class="timeline-dot"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tech Stack Section -->
+    <section id="tech">
+        <h2 class="section-title" data-aos="fade-up">Stack Tecnológico</h2>
+        <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">
+            Tecnologías que domino
+        </p>
+        <div class="tech-categories">
+            <div class="tech-category" data-aos="fade-up" data-aos-delay="200">
+                <h3><i class="fas fa-server"></i> Backend</h3>
+                <div class="tech-list">
+                    <div class="tech-item">
+                        <i class="fab fa-node-js" style="color: #339933;"></i>
+                        <span>Node.js</span>
+                    </div>
+                    <div class="tech-item">
+                        <i class="fas fa-code" style="color: #E0234E;"></i>
+                        <span>NestJS</span>
+                    </div>
+                    <div class="tech-item">
+                        <i class="fab fa-js" style="color: #F7DF1E;"></i>
+                        <span>JavaScript</span>
+                    </div>
+                    <div class="tech-item">
+                        <i class="fab fa-js-square" style="color: #3178C6;"></i>
+                        <span>TypeScript</span>
+                    </div>
+                    <div class="tech-item">
+                        <i class="fas fa-bolt" style="color: #FF6C37;"></i>
+                        <span>Express.js</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tech-category" data-aos="fade-up" data-aos-delay="300">
+                <h3><i class="fas fa-database"></i> Bases de Datos</h3>
+                <div class="tech-list">
+                    <div class="tech-item">
+                        <i class="fas fa-database" style="color: #336791;"></i>
+                        <span>PostgreSQL</span>
+                    </div>
+                    <div class="tech-item">
+                        <i class="fas fa-leaf" style="color: #47A248;"></i>
+                        <span>MongoDB</span>
+                    </div>
+                    <div class="tech-item">
+                        <i class="fas fa-database" style="color: #00758F;"></i>
+                        <span>MySQL</span>
+                    </div>
+                    <div class="tech-item">
+                        <i class="fas fa-layer-group" style="color: #2D3748;"></i>
+                        <span>Prisma</span>
+                    </div>
+                    <div class="tech-item">
+                        <i class="fas fa-code-branch" style="color: #E83524;"></i>
+                        <span>TypeORM</span>
+                    </div>
+                    <div class="tech-item">
+                        <i class="fas fa-leaf" style="color: #880000;"></i>
+                        <span>Mongoose</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tech-category" data-aos="fade-up" data-aos-delay="400">
+                <h3><i class="fas fa-laptop-code"></i> Frontend</h3>
+                <div class="tech-list">
+                    <div class="tech-item">
+                        <i class="fab fa-react" style="color: #61DAFB;"></i>
+                        <span>React</span>
+                    </div>
+                    <div class="tech-item">
+                        <i class="fab fa-css3-alt" style="color: #1572B6;"></i>
+                        <span>CSS3</span>
+                    </div>
+                    <div class="tech-item">
+                        <i class="fab fa-html5" style="color: #E34F26;"></i>
+                        <span>HTML5</span>
+                    </div>
+                    <div class="tech-item">
+                        <i class="fas fa-wind" style="color: #38B2AC;"></i>
+                        <span>Tailwind</span>
+                    </div>
+                    <div class="tech-item">
+                        <i class="fab fa-bootstrap" style="color: #7952B3;"></i>
+                        <span>Bootstrap</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tech-category" data-aos="fade-up" data-aos-delay="500">
+                <h3><i class="fas fa-cloud"></i> DevOps & Cloud</h3>
+                <div class="tech-list">
+                    <div class="tech-item">
+                        <i class="fab fa-docker" style="color: #2496ED;"></i>
+                        <span>Docker</span>
+                    </div>
+                    <div class="tech-item">
+                        <i class="fab fa-aws" style="color: #FF9900;"></i>
+                        <span>AWS</span>
+                    </div>
+                    <div class="tech-item">
+                        <i class="fab fa-git-alt" style="color: #F05032;"></i>
+                        <span>Git</span>
+                    </div>
+                    <div class="tech-item">
+                        <i class="fab fa-github"></i>
+                        <span>GitHub</span>
+                    </div>
+                    <div class="tech-item">
+                        <i class="fas fa-code-branch" style="color: #007ACC;"></i>
+                        <span>CI/CD</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education">
+        <h2 class="section-title" data-aos="fade-up">Educación y Certificaciones</h2>
+        <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">
+            Mi formación académica y profesional
+        </p>
+        <div class="education-grid">
+            <div class="education-card" data-aos="fade-up" data-aos-delay="200">
+                <div class="education-icon">
+                    <i class="fas fa-graduation-cap"></i>
+                </div>
+                <h3 class="education-title">Técnico Electrónico</h3>
+                <p class="education-institution">Instituto Técnico Salesiano Lorenzo Massa</p>
+                <p class="education-date">Año de graduación: 2012</p>
+                <p class="education-description">
+                    Título Técnico de Electrónica de nivel secundario.
+                </p>
+            </div>
+
+            <div class="education-card" data-aos="fade-up" data-aos-delay="300">
+                <div class="education-icon">
+                    <i class="fas fa-certificate"></i>
+                </div>
+                <h3 class="education-title">Certificación AWS Cloud Practitioner</h3>
+                <p class="education-institution">Amazon Web Services</p>
+                <p class="education-date">2025 - En curso</p>
+                <p class="education-description">
+                    Programa AWS re/Start, dictado junto a Fundación Compromiso y Potrero Digital.
+                    Este curso está orientado a desarrollar conocimientos fundamentales en la nube de AWS, incluyendo servicios de computación, almacenamiento y redes.
+                </p>
+            </div>
+
+            <div class="education-card" data-aos="fade-up" data-aos-delay="400">
+                <div class="education-icon">
+                    <i class="fas fa-award"></i>
+                </div>
+                <h3 class="education-title">Desarrollo Web Fullstack</h3>
+                <p class="education-institution">Henry</p>
+                <p class="education-date">Año de graduación: 2025</p>
+                <p class="education-description">
+                    Bootcamp intensivo de 8 meses cubriendo desarrollo frontend y backend, 
+                    bases de datos, despliegue y mejores prácticas de la industria.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2 class="section-title" data-aos="fade-up">Contacto</h2>
+        <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">
+            Envíame un mensaje
+        </p>
+        <div class="contact-container">
+            <div class="contact-info" data-aos="fade-right" data-aos-delay="200">
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <div class="contact-details">
+                        <h4>Email</h4>
+                        <p>augusto_galvan@outlook.com</p>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <div class="contact-details">
+                        <h4>Ubicación</h4>
+                        <p>Tucumán, Argentina</p>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <i class="fas fa-share-alt"></i>
+                    </div>
+                    <div class="contact-details">
+                        <h4>Redes</h4>
+                        <div class="contact-social-links">
+                            <a href="https://github.com/augustogalvanb" target="_blank" class="contact-social-link">
+                                <i class="fab fa-github"></i> GitHub
+                            </a>
+                            <a href="https://linkedin.com/in/augustogalvanb/" target="_blank" class="contact-social-link">
+                                <i class="fab fa-linkedin"></i> LinkedIn
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <form class="contact-form" data-aos="fade-left" data-aos-delay="300" id="contactForm">
+                <div class="form-group">
+                    <label for="name">Nombre</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="subject">Asunto</label>
+                    <input type="text" id="subject" name="subject" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Mensaje</label>
+                    <textarea id="message" name="message" required></textarea>
+                </div>
+                <button type="submit" class="form-submit">
+                    <i class="fas fa-paper-plane"></i>
+                    Enviar Mensaje
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Redes Sociales</h3>
+                <div class="social-links">
+                    <a href="https://github.com/augustogalvanb" target="_blank" class="social-link" aria-label="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://linkedin.com/in/augustogalvanb/" target="_blank" class="social-link" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Enlaces Rápidos</h3>
+                <p><a href="#about" style="color: var(--text-secondary); text-decoration: none;">Sobre mí</a></p>
+                <p><a href="#projects" style="color: var(--text-secondary); text-decoration: none;">Proyectos</a></p>
+                <p><a href="#experience" style="color: var(--text-secondary); text-decoration: none;">Experiencia</a></p>
+                <p><a href="#contact" style="color: var(--text-secondary); text-decoration: none;">Contacto</a></p>
+            </div>
+            <div class="footer-section">
+                <h3>Servicios</h3>
+                <p>Desarrollo de APIs RESTful</p>
+                <p>Desarrollo Web</p>
+                <p>Desarrollo Backend</p>
+                <p>Desarrollo Fullstack</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Augusto Galván. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- CV Modal -->
+    <div class="modal" id="cvModal">
+        <div class="modal-content modal-cv">
+            <button class="modal-close" id="closeCvModal">&times;</button>
+            <div class="modal-icon">
+                <i class="fas fa-file-pdf"></i>
+            </div>
+            <h3>Mi CV</h3>
+            <p>¡Escríbeme y con gusto te envío mi CV!</p>
+            <a href="#contact" class="btn btn-primary" id="goToContact">
+                <i class="fas fa-envelope"></i>
+                Ir a Contacto
+            </a>
+        </div>
+    </div>
+
+    <!-- Video Modal -->
+    <div class="modal video-modal" id="videoModal">
+        <div class="modal-content modal-video">
+            <button class="modal-close" id="closeVideoModal">&times;</button>
+            <div class="video-container">
+                <iframe id="videoFrame" src="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast Notification -->
+    <div class="toast" id="toast"></div>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
