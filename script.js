@@ -96,8 +96,8 @@ contactForm.addEventListener('submit', async (e) => {
     submitButton.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Enviando...';
     
     try {
-        // Send data to API
-        const response = await fetch('https://server-email-portfolio-lovat.vercel.app/contact', {
+        // Send data to API - CAMBIA ESTA URL POR LA DE TU PROYECTO EN VERCEL
+        const response = await fetch('https://tu-proyecto.vercel.app/api/contact', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -135,7 +135,7 @@ function showToast(message, type = 'success') {
     
     setTimeout(() => {
         toast.classList.remove('show');
-    }, 3000);
+    }, 4000); // Se oculta después de 4 segundos
 }
 
 // CV Modal functionality
