@@ -19,16 +19,13 @@
 
 - [Descripción General](#-descripción-general)
 - [Características Principales](#-características-principales)
-- [Arquitectura del Proyecto](#-arquitectura-del-proyecto)
 - [Stack Tecnológico](#️-stack-tecnológico)
 - [Funcionalidades Destacadas](#-funcionalidades-destacadas)
 - [Estructura de Archivos](#-estructura-de-archivos)
 - [Sistema de Contacto](#-sistema-de-contacto)
 - [Instalación y Configuración](#-instalación-y-configuración)
-- [Variables de Entorno](#-variables-de-entorno)
 - [Deployment](#-deployment)
 - [Optimizaciones](#-optimizaciones)
-- [Próximas Mejoras](#-próximas-mejoras)
 - [Contacto](#-contacto)
 
 ---
