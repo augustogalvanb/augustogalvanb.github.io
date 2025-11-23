@@ -1,8 +1,7 @@
-# 🚀 Portfolio Personal - Augusto Galván
+# Portfolio Personal - Augusto Galván
 
 <div align="center">
 
-![Portfolio Preview](https://img.shields.io/badge/Estado-Activo-success?style=for-the-badge)
 ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
 ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
@@ -10,7 +9,7 @@
 
 **Portfolio profesional interactivo con sistema de contacto funcional y tema claro/oscuro**
 
-[Ver Demo](https://tuportfolio.com) • [Reportar Bug](https://github.com/augustogalvanb/portfolio/issues) • [Solicitar Feature](https://github.com/augustogalvanb/portfolio/issues)
+[Ver Demo](http://augustogalvanb.github.io/)
 
 </div>
 
@@ -36,7 +35,7 @@
 
 ## 🎯 Descripción General
 
-Portfolio personal desarrollado con tecnologías modernas del lado del cliente (Vanilla JavaScript) y un backend serverless para el manejo del formulario de contacto. El proyecto destaca por su diseño limpio, rendimiento optimizado y experiencia de usuario fluida.
+Portfolio personal desarrollado con Vanilla JavaScript y un backend para el manejo del formulario de contacto. El proyecto destaca por su diseño limpio, rendimiento optimizado y experiencia de usuario fluida.
 
 ### **¿Por qué este proyecto es interesante?**
 
@@ -56,7 +55,6 @@ Portfolio personal desarrollado con tecnologías modernas del lado del cliente (
 - **Sistema de Temas Dual**: Toggle entre modo claro y oscuro con persistencia en LocalStorage
 - **Diseño Responsive**: Adaptable a dispositivos móviles, tablets y desktop
 - **Animaciones Fluidas**: Implementadas con AOS.js e Intersection Observer
-- **Navegación Inteligente**: Menú fijo con indicador de sección activa
 - **Gradientes Modernos**: Sistema de colores con CSS custom properties
 
 ### 🛠️ **Funcionalidades Técnicas**
@@ -71,7 +69,7 @@ Portfolio personal desarrollado con tecnologías modernas del lado del cliente (
   - Validación en tiempo real
   - Envío asíncrono con feedback visual
   - Sistema de notificaciones toast
-  - Backend serverless con Nodemailer
+  - Backend con Nodemailer
 
 ### 🎭 **Experiencia de Usuario**
 
@@ -79,29 +77,6 @@ Portfolio personal desarrollado con tecnologías modernas del lado del cliente (
 - **Typing Effect**: Animación de máquina de escribir en el hero
 - **Scroll to Top Button**: Botón flotante para volver arriba
 - **Hover Effects**: Micro-interacciones en cards y botones
-- **Active Link Indicator**: Resaltado de sección actual en navegación
-
----
-
-## 🏗️ Arquitectura del Proyecto
-
-```
-📦 Portfolio
-│
-├── 🎨 Frontend (Client-Side)
-│   ├── index.html          → Estructura semántica
-│   ├── styles.css          → Sistema de diseño + responsive
-│   └── script.js           → Lógica de interacciones
-│
-└── ⚙️ Backend (Serverless)
-    └── contact.js          → API handler para envío de emails
-```
-
-### **Flujo de Comunicación**
-
-```
-Usuario → Formulario → Fetch API → Vercel Serverless Function → Nodemailer → Gmail SMTP → Email recibido
-```
 
 ---
 
@@ -124,14 +99,14 @@ Usuario → Formulario → Fetch API → Vercel Serverless Function → Nodemail
 |------------|-----|---------|
 | **Node.js** | Runtime del servidor | 18+ |
 | **Nodemailer** | Envío de emails | Latest |
-| **Vercel Serverless** | Hosting del backend | - |
+| **Vercel** | Hosting del backend | - |
 
 ### **Herramientas de Desarrollo**
 
 - Git & GitHub para control de versiones
-- Vercel para deployment continuo
+- Vercel para deployment del backend
 - Gmail SMTP para servicio de emails
-
+- Github Pages para deployment del frontend
 ---
 
 ## 🌟 Funcionalidades Destacadas
@@ -201,7 +176,7 @@ contactForm.addEventListener('submit', async (e) => {
 });
 ```
 
-**Backend Serverless**:
+**Backend**:
 ```javascript
 // contact.js - Vercel Serverless Function
 export default async function handler(req, res) {
@@ -298,11 +273,11 @@ portfolio/
 ├── script.js                  # Toda la lógica del cliente
 │
 ├── assets/                    # Recursos estáticos
-│   ├── images/               # Imágenes del portfolio
+│   ├── images                # Imágenes del portfolio
 │   ├── logo.svg              # Logo personal
-│   └── projects/             # Screenshots de proyectos
+│  
 │
-└── api/                       # Backend serverless
+└── api/                       # Backend
     └── contact.js            # Handler del formulario
 ```
 
@@ -331,7 +306,7 @@ Validación Local
     ↓
 Fetch API (POST)
     ↓
-Vercel Serverless Function
+Vercel Server
     ↓
 Validación Backend
     ↓
@@ -358,22 +333,18 @@ El email enviado incluye:
 
 - Node.js 18+ 
 - Cuenta de Gmail con contraseña de aplicación
-- Cuenta de Vercel (para deployment)
 
 ### **Instalación Local**
 
 ```bash
 # 1. Clonar el repositorio
-git clone https://github.com/augustogalvanb/portfolio.git
-cd portfolio
+git clone https://github.com/augustogalvanb/augustogalvanb.github.io.git
+cd augustogalvanb.github.io
 
 # 2. El frontend no requiere instalación, abrir index.html en el navegador
 # O usar un servidor local:
 npx serve .
 
-# 3. Para el backend (si quieres probarlo localmente):
-cd api
-npm install nodemailer
 ```
 
 ### **Configuración del Backend**
@@ -391,6 +362,8 @@ EMAIL_PASS=tu_app_password_de_16_caracteres
 
 ---
 
+## 📦 Deployment
+
 ## 🔐 Variables de Entorno
 
 ### **Backend (Vercel)**
@@ -407,15 +380,11 @@ Configura estas variables en el dashboard de Vercel:
 Actualizar la URL del endpoint en `script.js`:
 
 ```javascript
-const response = await fetch('https://TU_PROYECTO.vercel.app/contact', {
+const response = await fetch('https://TU_PROYECTO.vercel.app/api/contact', {
     method: 'POST',
     // ...
 });
 ```
-
----
-
-## 📦 Deployment
 
 ### **Frontend (GitHub Pages, Netlify, Vercel)**
 
@@ -431,7 +400,7 @@ vercel --prod
 netlify deploy --prod
 ```
 
-### **Backend (Vercel Serverless)**
+### **Backend (Vercel)**
 
 ```bash
 # 1. Instalar Vercel CLI
@@ -453,7 +422,6 @@ vercel login
 # 4. Deploy
 vercel --prod
 
-# 5. Configurar variables de entorno en el dashboard
 ```
 
 ---
@@ -484,25 +452,6 @@ vercel --prod
 
 ---
 
-## 🔮 Próximas Mejoras
-
-- [ ] **Internacionalización (i18n)**: Soporte multi-idioma
-- [ ] **Blog Section**: Sección de artículos técnicos
-- [ ] **Analytics**: Implementar Google Analytics 4
-- [ ] **PWA**: Convertir en Progressive Web App
-- [ ] **Testing**: Unit tests con Jest
-- [ ] **CMS**: Headless CMS para proyectos (Sanity/Strapi)
-- [ ] **Optimización de Imágenes**: WebP + lazy loading avanzado
-- [ ] **Service Worker**: Caching estratégico
-
----
-
-## 📄 Licencia
-
-Este proyecto está bajo la Licencia MIT. Ver el archivo `LICENSE` para más detalles.
-
----
-
 ## 👤 Contacto
 
 **Augusto Galván** - Backend Web Developer Jr.
@@ -511,23 +460,3 @@ Este proyecto está bajo la Licencia MIT. Ver el archivo `LICENSE` para más det
 - 💼 LinkedIn: [linkedin.com/in/augustogalvanb](https://linkedin.com/in/augustogalvanb/)
 - 🐙 GitHub: [github.com/augustogalvanb](https://github.com/augustogalvanb)
 - 📍 Ubicación: San Miguel de Tucumán, Argentina
-
----
-
-## 🙏 Agradecimientos
-
-- [AOS.js](https://michalsnik.github.io/aos/) - Animaciones on scroll
-- [Font Awesome](https://fontawesome.com/) - Iconos
-- [Google Fonts](https://fonts.google.com/) - Tipografías
-- [Nodemailer](https://nodemailer.com/) - Email handling
-- [Vercel](https://vercel.com/) - Hosting serverless
-
----
-
-<div align="center">
-
-**⭐ Si te gustó este proyecto, no olvides darle una estrella ⭐**
-
-[![GitHub stars](https://img.shields.io/github/stars/augustogalvanb/portfolio?style=social)](https://github.com/augustogalvanb/portfolio)
-
-</div>
