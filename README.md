@@ -377,7 +377,7 @@ Configura estas variables en el dashboard de Vercel:
 Actualizar la URL del endpoint en `script.js`:
 
 ```javascript
-const response = await fetch('https://TU_PROYECTO.vercel.app/api/contact', {
+const response = await fetch('https://TU_PROYECTO.vercel.app/contact', {
     method: 'POST',
     // ...
 });
